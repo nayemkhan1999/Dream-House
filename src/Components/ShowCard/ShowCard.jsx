@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 const ShowCard = ({ Ui }) => {
-  const { title, house_name, description, price, image } = Ui;
+  const {id, title, house_name, description, price, image } = Ui;
 
   return (
     <div>
@@ -35,7 +35,7 @@ const ShowCard = ({ Ui }) => {
           </button>
         </div>
         <img
-          src="https://source.unsplash.com/301x301/?random"
+          src={image}
           alt=""
           className="object-cover object-center w-full h-72 dark:bg-gray-500"
         />
@@ -130,7 +130,7 @@ const ShowCard = ({ Ui }) => {
               placeholder="Add a comment..."
               className="w-full py-0.5 dark:bg- border-none rounded text-sm pl-0 dark:text-gray-800 "
             />
-            <NavLink to='/seeMoreDetails'>
+            <NavLink to={`/seeMoreDetails/${id}`}>
               <button className="btn btn-active btn-ghost w-full text-xl font-medium mt-3">
                 SEE MORE
               </button>
