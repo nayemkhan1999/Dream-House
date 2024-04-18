@@ -19,7 +19,7 @@ const Nav = () => {
   );
 
   return (
-    <div>
+    <div className="averia-serif">
       <div className="navbar bg-base-100  shadow-md rounded-b-lg px-5 py-2 ">
         <div className="navbar-start ">
           <div className="dropdown">
@@ -55,7 +55,7 @@ const Nav = () => {
           <ul className="menu menu-horizontal  px-1">{Link}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">LOGIN</a>
+          <NavLink to='/login' className="btn text-orange-500 bg-gray-200 font-bold">LOGIN</NavLink>
         </div>
       </div>
     </div>
