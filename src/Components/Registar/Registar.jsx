@@ -1,9 +1,13 @@
 import { useContext, useState } from "react";
-import { useForm } from "react-hook-form";
+
+
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "../../Login.css";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
+import { useForm } from "react-hook-form";
+
 
 const Registar = () => {
   const { createUser } = useContext(AuthContext);
@@ -25,6 +29,9 @@ const Registar = () => {
 
   return (
     <div className="mx-24 averia-serif ">
+        <Helmet>
+        <title>Dream House | Registar Page</title>
+      </Helmet>
       <div className="hero min-h-screen img">
         <div className="card shrink-0 w-full max-w-sm shadow-2xl mt-4 mb-4  text-white z-10">
           <form onSubmit={handleSubmit(onSubmit)} className="card-body">

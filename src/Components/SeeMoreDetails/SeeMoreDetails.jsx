@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { NavLink, useParams } from "react-router-dom";
 
 const SeeMoreDetails = () => {
@@ -12,9 +13,12 @@ const SeeMoreDetails = () => {
         setDetails(singleData);
       });
   }, [id]);
-  const { title, house_name, description, price, image,quality,location,contact } = details;
+  const { title, house_name, description,  image,quality,location,contact } = details;
   return (
     <div className="mx-24 averia-serif mt-14">
+        <Helmet>
+        <title>Dream House | Details Page</title>
+      </Helmet>
       <section className="dark:bg-gray-100 dark:text-gray-800 rounded-t-lg">
         <div className="container flex flex-col  justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
           <div className="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
