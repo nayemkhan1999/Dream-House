@@ -6,7 +6,8 @@ const About = () => {
       <Helmet>
         <title>Dream House | About Page</title>
       </Helmet>
-      <h3 className="text-3xl">This is about page</h3>
+      <h3 className="text-3xl font-bold">This is about page</h3>
+      <h3 className="text-xl ">more project come soonn</h3>
     </div>
   );
 };
